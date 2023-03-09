@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Install node in alpine
-RUN apk add --update nodejs npm
+RUN apk add --update nodejs npm git
 
 WORKDIR /app
 
@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 # Run app
-ENTRYPOINT ["node", "/app/index.js"]
+ENTRYPOINT ["npm", "run", "start"]
