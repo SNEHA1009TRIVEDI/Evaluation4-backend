@@ -31,9 +31,12 @@ const deleteFieldById = async (id) => {
     return result;
 }
 
+
+
 module.exports = {
     getAllFields,
     createField,
     getFieldById,
-    deleteFieldById
+    deleteFieldById,
+    
 }

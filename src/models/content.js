@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   Content.init(
     {
       content_type_name: DataTypes.STRING,
+      content_type_id: DataTypes.INTEGER,
     },
     {
       sequelize,

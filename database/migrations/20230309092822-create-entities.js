@@ -13,10 +13,17 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       field_value: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+
       },
       collection_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Collections',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

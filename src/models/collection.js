@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.Content, {
-        foreignKey: "collection_type_id",
-      });
+      // this.hasMany(models.Content, {
+      //   foreignKey: "collection_type_id",
+      // });
       
     }
   }

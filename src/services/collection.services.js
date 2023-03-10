@@ -13,7 +13,7 @@ const createCollection = async (collection_type_id, collection_type_name) => {
   return result;
 };
 
-const getCollectionId = async (req, res) => {
+const getCollectionId = async (id) => {
   const result = await db.Collection.findAll({
     where: {
       collection_type_id: id,
@@ -21,8 +21,8 @@ const getCollectionId = async (req, res) => {
     include: [
       {
         model: db.entities,
-        attributes: ['field_id', 'field_value', 'collection_id'],
-			  required: false,
+        attributes: ["field_id", "field_value", "collection_id"],
+        required: false,
       },
     ],
   });
